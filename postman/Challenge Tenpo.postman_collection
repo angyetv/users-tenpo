@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "0c49e8eb-9411-47a5-a4d8-ad863902aad3",
+		"name": "Challenge Tenpo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22878221"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Angye Daniela\", \r\n    \"username\": \"angye\",\r\n    \"email\": \"xx@email.com\",\r\n    \"password\": \"test\",\r\n    \"roles\": [\r\n        \"USER_ROL\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"dani\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmd5ZSIsImlhdCI6MTY2NTI3MzMxOSwiZXhwIjoxNjY1MjczOTE5fQ.W66WnvRqgBLT5zQCmsB9KVdAQkkaCYYBjLyZ3Z4FZ5bcSmsb6zVqVlvdFUro2W50PuQswenKOTi3OqTNNdXBWA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW5pIiwiaWF0IjoxNjY1MTEzOTIyLCJleHAiOjE2NjUxNDk5MjJ9.juGXfA2XEx2t-8dg9ZgNNtieEb8_LbKH39BQJIPAb02N9Gb97yjOLSTuT8L243SYuxfgr66cqombXo3DVmJV-Q",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/business/records?page=2&size=4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"business",
+						"records"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "size",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Percentage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmd5ZSIsImlhdCI6MTY2NTMzOTA4NiwiZXhwIjoxNjY1MzM5Njg2fQ.cAJYfSHVyUEU63IcTnY-o52i_qbr4_lYBO8_tRCDw-b14AslEXfyHf5tz9ugvaaMzdi6h619j4f5FxsPj1XImQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/business/percentage?numberOne=5&numberTwo=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"business",
+						"percentage"
+					],
+					"query": [
+						{
+							"key": "numberOne",
+							"value": "5"
+						},
+						{
+							"key": "numberTwo",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
