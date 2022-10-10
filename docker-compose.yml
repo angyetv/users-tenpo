@@ -25,3 +25,8 @@ services:
       - POSTGRES_USER=compose_postgres
       - POSTGRES_PASSWORD=compose_postgres
       - POSTGRES_DB=compose_postgres
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
