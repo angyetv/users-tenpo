@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RegistrationRequestRepository extends PagingAndSortingRepository<RegistrationRequest, Long> {
+    boolean existsByEndpoint(String endpoint);
 }

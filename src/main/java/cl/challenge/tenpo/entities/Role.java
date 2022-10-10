@@ -1,7 +1,6 @@
 package cl.challenge.tenpo.entities;
 
 import cl.challenge.tenpo.enums.RoleEnum;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class UsersTenpoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UsersTenpoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UsersTenpoApplication.class, args);
+    }
 }

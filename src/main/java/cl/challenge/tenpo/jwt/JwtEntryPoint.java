@@ -4,7 +4,6 @@ import cl.challenge.tenpo.entities.RegistrationRequest;
 import cl.challenge.tenpo.services.RegistrationRequestService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
